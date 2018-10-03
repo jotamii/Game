@@ -23,7 +23,7 @@ function flipCard() {
 
 function checkForMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        disableCards();
+        removeCards()
         return;
     }
 
@@ -52,10 +52,15 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
+function removeCards() {
+    firstCard.style.visibility = "hidden";
+    secondCard.style.visibility = "hidden";
+}
+
 (function shuffle() {
-       cards.forEach(card => {
-         let ramdomPos = Math.floor(Math.random() * 12);
+    cards.forEach(card => {
+        let ramdomPos = Math.floor(Math.random() * 12);
         card.style.order = ramdomPos;
-       });
-     })();
+    });
+})();
 cards.forEach(card => card.addEventListener('click', flipCard));
