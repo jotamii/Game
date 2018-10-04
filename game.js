@@ -44,7 +44,7 @@ function unflipCards() {
         secondCard.classList.remove('flip');
 
         resetBoard();
-    }, 1500);
+    }, 1000);
 }
 
 function resetBoard() {
@@ -53,8 +53,12 @@ function resetBoard() {
 }
 
 function removeCards() {
-    firstCard.style.visibility = "hidden";
-    secondCard.style.visibility = "hidden";
+    lockBoard = true;
+    setTimeout(() => {
+        firstCard.style.visibility = "hidden";
+        secondCard.style.visibility = "hidden";
+        resetBoard();
+    }, 1500);
 }
 
 (function shuffle() {
