@@ -14,7 +14,7 @@ body {
     background: url(../gamebackground.png) no-repeat center;
   }
   
-.score {
+.bar {
     margin-top: -15px;
     margin-bottom: auto;
     margin-left: -54px;

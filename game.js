@@ -3,6 +3,9 @@ const cards = document.querySelectorAll('.memory-card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+var score = 0;
+var moves = 0;
+
 
 function flipCard() {
     if (lockBoard) return;
@@ -14,21 +17,24 @@ function flipCard() {
         firstCard = this;
         return;
     }
-
     secondCard = this;
     hasFlippedCard = false;
-
+    moves += 1;
+        document.querySelector(".moves").innerHTML = 'Moves: ' + moves;
     checkForMatch();
 }
+
 
 function checkForMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
         removeCards()
+        score += 1;
+        document.querySelector(".score").innerHTML = 'Score: ' + score;
         return;
     }
-
     unflipCards();
 }
+
 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
@@ -38,11 +44,9 @@ function disableCards() {
 
 function unflipCards() {
     lockBoard = true;
-
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-
         resetBoard();
     }, 1000);
 }
