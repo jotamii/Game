@@ -90,11 +90,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     z-index: 100;
-    left: 100px;
-    top: 108px;
+    left: 150px;
+    top: 150px;
     width: 600px;
     height: 400px;
-    background-color: rgb(19, 212, 212);
+    background-color: rgba(27, 155, 10, 0.979);
     border-radius: 10px;
 }
 
