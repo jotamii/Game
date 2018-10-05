@@ -13,6 +13,8 @@ var moves = 0;
 
 function play() {
     resetScoreAndLife();
+    cardsAppears();
+    shuffle();
     // tilesPair = 0;
 }
 
@@ -49,6 +51,9 @@ function checkForMatch() {
         removeCards()
         score += 1;
         document.querySelector(".score").innerHTML = 'Score: ' + score;
+        if (score === 1) {
+            stopGame();
+        }
         return;
     }
     unflipCards();

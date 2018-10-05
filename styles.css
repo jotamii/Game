@@ -1,4 +1,4 @@
-/* styles.css */
+
 
 * {
     padding: 0;
@@ -6,7 +6,6 @@
     box-sizing: border-box;
   }
 
-/* styles.css */
 
 body {
     height: 100vh;
@@ -43,7 +42,18 @@ body {
     perspective: 1000px;
   }
 
-/* styles.css */
+  .memory-board {
+    width: 1010px;
+    height: 650px;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* margin-left: 470px; */
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }
+
 
 .memory-card {
     width: 135px;
@@ -142,3 +152,44 @@ body {
     text-shadow: 0px -2px #669644;
 }
 
+.endScreen {
+  position: absolute;
+  z-index: 101;
+  left: 170px;
+  top: 108px;
+  width: 600px;
+  height: 400px;
+  background-color: rgb(19, 212, 212);
+  border-radius: 10px;
+  display: none;
+} 
+
+.endScreenContent {
+  position: absolute;
+  left: 100px;
+  top: 75px;
+  width: 400px;
+  height: 250px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+  margin: 80 auto;
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+}
+
+.endScore {
+  position: absolute;
+  left: 100px;
+  top: 170px;
+  width: 400px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 80 auto;
+  font-size: 35px;
+  text-align: center;
+}
