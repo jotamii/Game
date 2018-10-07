@@ -11,6 +11,7 @@ body {
     height: 100vh;
     display: flex;
     background: url(../gamebackground.png) no-repeat center;
+    font-family: 'Mali', cursive;
   }
   
 .bar {
@@ -104,7 +105,7 @@ body {
     top: 150px;
     width: 600px;
     height: 400px;
-    background-color: rgba(27, 155, 10, 0.979);
+    background-color: rgba(16, 102, 4, 0.979);
     border-radius: 10px;
 }
 
@@ -115,11 +116,11 @@ body {
     width: 500px;
     height: 200px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 40px;
     background-color: white;
     margin: 80 auto;
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: bold;
     background: rgba(255,255,255,0.5);
     border-radius:10px;
@@ -132,7 +133,7 @@ body {
     left: 240px;
     padding: 10px;
     border-radius: 10px;
-    width: 100px;
+    width: 130px;
     text-align: center;
     cursor: hand;
     cursor: pointer;
@@ -152,6 +153,32 @@ body {
     text-shadow: 0px -2px #669644;
 }
 
+.buttonend {
+  position: absolute;
+  top: 250px;
+  left: 210px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 175px;
+  text-align: center;
+  cursor: hand;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  margin: 0 auto;
+  background-color: rgba(83, 197, 2, 0.925);
+  border-bottom: 5px solid #669644;
+  text-shadow: 0px -2px #669644;
+
+}
+
+.buttonend:hover {
+  background-color:  rgb(125, 185, 82);
+  border-bottom: 5px solid #669644;
+  text-shadow: 0px -2px #669644;
+}
+
 .endScreen {
   position: absolute;
   z-index: 101;
@@ -159,7 +186,7 @@ body {
   top: 108px;
   width: 600px;
   height: 400px;
-  background-color: rgb(19, 212, 212);
+  background-color: rgba(16, 102, 4, 0.979);
   border-radius: 10px;
   display: none;
 } 
@@ -169,7 +196,7 @@ body {
   left: 100px;
   top: 75px;
   width: 400px;
-  height: 250px;
+  height: 260px;
   box-sizing: border-box;
   padding: 20px;
   background-color: white;

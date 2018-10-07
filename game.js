@@ -5,17 +5,10 @@ let lockBoard = false;
 let firstCard, secondCard;
 var score = 0;
 var moves = 0;
-// var tilesPair = 0
-// var second = 0; 
-// var minute = 0;
-// var interval;
 
 
 function play() {
     resetScoreAndLife();
-    cardsAppears();
-    shuffle();
-    // tilesPair = 0;
 }
 
 function flipCard() {
@@ -35,38 +28,17 @@ function flipCard() {
     checkForMatch();
 }
 
-// if (moves == 1){
-//     interval = setInterval(function(){
-//         second +=1;
-//         document.querySelector(".time").innerHTML = 'Time: ' + time;
-//         if (second == 60){
-//             minute +=1;
-//             second = 0;
-//         }
-//     },1000);
-// }
-
 function checkForMatch() {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
         removeCards()
         score += 1;
         document.querySelector(".score").innerHTML = 'Score: ' + score;
-        if (score === 1) {
+        if (score === 12) {
             stopGame();
         }
         return;
     }
     unflipCards();
-}
-
-// if (score === 1) {
-//     stopGame();
-// }
-
-function disableCards() {
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-    resetBoard();
 }
 
 function unflipCards() {
